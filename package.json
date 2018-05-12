@@ -1,0 +1,19 @@
+{
+  "name": "tcp-server",
+  "version": "1.0.0",
+  "description": "Node.js TCP server implementation",
+  "main": "init.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarthak625/TCP-Server-Using-Node.git"
+  },
+  "author": "Sarthak Negi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sarthak625/TCP-Server-Using-Node/issues"
+  },
+  "homepage": "https://github.com/sarthak625/TCP-Server-Using-Node#readme"
+}
