@@ -14,8 +14,19 @@ server.listen(PORT,address,function(){
 });
 
 function onClientConnected(socket){
-    console.log("New client: ${socket.remoteAddress}:${socket.remotePort}");
-    socket.destroy();
+    let clientName = socket.remoteAddress+" "+socket.remotePort;
+    
+    console.log(clientName+" connected.");
+    
+    socket.on('data',(data)=>{
+       let m = data.toString().replace(/[\n\r]*$/, ''); 
+       console.log(clientName+" said: "+m);
+       socket.write("We got your message "+m+"\n Thanks!");
+    });
+    
+    socket.on('end',()=>{
+        console.log(clientName+" disconnected.");
+    })
 }
 
 console.log("Server started");
